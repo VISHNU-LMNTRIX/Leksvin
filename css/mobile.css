@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 /*
  * File: css/mobile.css
  * Description: Mobile-first styles (default) and utility classes.
@@ -16,9 +18,9 @@
     --color-dark-gray: #212121;
     --color-white: #FFFFFF;
     --color-light-gray: #F5F5F5;
-    --color-primary-violet: #8A2BE2; /* Used for "Why Choose Us" underline */
-    --color-cta-primary: var(--color-dark-gray);
-    --color-cta-secondary: var(--color-white);
+    --color-primary-violet: #462be2; /* Used for "Why Choose Us" underline */
+    --color-cta-primary: var(--color-white);
+    --color-cta-secondary: var(--color-dark-gray);
 
     /* Fonts */
     --font-primary: 'Montserrat', sans-serif;
@@ -219,12 +221,12 @@ h1, h2, h3 {
 /* === Buttons === */
 .btn {
     padding: 12px 30px;
-    border-radius: 5px;
+    border-radius: 30px;
     text-transform: uppercase;
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
-    border: 2px solid;
+    /* border: 2px solid; */
     display: inline-block;
     text-align: center;
 }
@@ -232,12 +234,12 @@ h1, h2, h3 {
 .btn-primary {
     background-color: var(--color-cta-primary);
     color: var(--color-cta-secondary);
-    border-color: var(--color-cta-primary);
+    border-color: var(--color-cta-secondary);
 }
 
 .btn-primary:hover {
-    background-color: var(--color-white);
-    color: var(--color-cta-primary);
+    background-color: var(--color-light-gray);
+    color: var(--color-dark-gray);
 }
 
 .btn-secondary {
