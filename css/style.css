@@ -1,0 +1,149 @@
+/*
+ * File: css/style.css
+ * Description: Desktop-specific styles and overrides (Media Query).
+ * Imports: mobile.css for base styles.
+ */
+
+@import url('mobile.css');
+
+/* === Desktop/Larger Screen Styles (Laptops and up) === */
+@media (min-width: 768px) {
+
+    /* === Navbar (Desktop) - Transparent and Centered Links === */
+    .navbar {
+        background-color: transparent; /* Transparent on desktop */
+        position: absolute;
+        padding: 20px 5%;
+        height: auto;
+    }
+
+    .hamburger {
+        display: none; /* Hide hamburger menu on desktop */
+    }
+
+    .nav-logo {
+        position: relative;
+        left: 0;
+        transform: none;
+    }
+
+    .desktop-nav-links {
+        display: flex;
+        gap: 40px;
+        list-style: none;
+        color: var(--color-white);
+        font-weight: 500;
+        margin-left: auto;
+    }
+
+    .desktop-nav-links a:hover {
+        color: var(--color-primary-violet);
+    }
+
+    /* === Hero Banner (Desktop) === */
+    .hero-content h1 {
+        font-size: 3.5em;
+    }
+    .hero-content p {
+        font-size: 1.2em;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .hero-cta {
+        flex-direction: row;
+        gap: 20px;
+        justify-content: center;
+    }
+    .hero-cta .btn {
+        width: auto;
+    }
+
+
+    /* === Product Categories Section (Desktop) === */
+    .category-grid {
+        grid-template-columns: repeat(6, 1fr); /* 6 categories in a row */
+        gap: 30px;
+    }
+    .category-circle {
+        width: 120px;
+        height: 120px;
+    }
+
+    /* === Brands Section (Desktop) === */
+    .brand-logos {
+        flex-direction: row; /* Desktop: Grid layout */
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 50px;
+    }
+    .brand-logos img {
+        width: 100px; /* Smaller and uniform size */
+    }
+
+    /* === Why Choose Us Section (Desktop) === */
+    .why-points-grid {
+        flex-direction: row; /* Desktop: Two cards in a row */
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .why-point-card {
+        width: 48%; /* Two cards per row with space in between */
+    }
+
+
+    /* === Footer (Desktop) === */
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 50px;
+    }
+
+    .footer-logo-area {
+        max-width: 300px;
+        margin-right: 50px;
+    }
+
+    .footer-links {
+        display: flex;
+        gap: 50px;
+    }
+
+    .social-links {
+        display: none; /* Hide social links from mobile version on desktop */
+    }
+
+    .footer-copyright {
+        text-align: left;
+    }
+
+    /* Remove mobile sliding menu on desktop */
+    .sliding-menu {
+        display: none;
+    }
+
+    /* === About Us Page Layout (Desktop) === */
+    .about-split-container {
+        display: flex;
+        min-height: 600px;
+    }
+    .about-text-content {
+        flex: 1;
+        padding: 50px 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .about-image-side {
+        flex: 1;
+        background: url('../img/about-us-img.jpg') no-repeat center center/cover;
+    }
+
+    /* === Contact Us Page Layout (Desktop) === */
+    .contact-form-section {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
