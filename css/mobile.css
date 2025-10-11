@@ -105,11 +105,16 @@ h1, h2, h3 {
     padding: 0 5%;
 }
 
+/* Logo Styling */
+.logo-svg {
+    height: 30px; /* Adjust size for mobile navbar height (60px) */
+    width: auto;
+}
+
 .nav-logo {
-    font-size: 24px;
-    font-weight: 900;
-    color: var(--color-white);
-    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    height: 100%; /* Match navbar height */
 }
 
 .hamburger {
@@ -246,17 +251,27 @@ h1, h2, h3 {
     color: var(--color-white);
 }
 
-/* === Homepage Banner === */
+/* === Homepage Banner (Mobile) === */
 .hero-banner {
     height: 100vh;
     min-height: 500px;
-    background: url('../img/banner-bg.jpg') no-repeat center center/cover;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
     padding-top: 60px; /* Clearance for fixed navbar */
+    
+    /* FALLBACK: Load JPEG for older browsers or those that fail to load WebP.
+       We assume the image path is correct relative to the CSS file: '../img/banner-bg-mobile.jpg' */
+    background: url('../img/banner-bg-mobile.jpg') no-repeat center center/cover;
+}
+
+/* WebP Support Check: Overwrite with WebP if the browser supports it */
+@supports (background-image: url("data:image/webp;base64,UklGRiIAAABXRUJQVlA4IBYAAAAwAQCdASoBAAEADsD+JaQAA3AA/vhAA")) {
+    .hero-banner {
+        background-image: url('../img/banner-bg-mobile.webp');
+    }
 }
 
 .hero-overlay {

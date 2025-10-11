@@ -8,7 +8,6 @@
 
 /* === Desktop/Larger Screen Styles (Laptops and up) === */
 @media (min-width: 768px) {
-
     /* === Navbar (Desktop) - Transparent and Centered Links === */
     .navbar {
         background-color: transparent; /* Transparent on desktop */
@@ -40,7 +39,19 @@
         color: var(--color-primary-violet);
     }
 
-    /* === Hero Banner (Desktop) === */
+    /* === Hero Banner (Desktop) - Overriding Mobile Banner === */
+    /* Fallback for desktop: banner-bg-desktop.jpg */
+    .hero-banner {
+        background-image: url('../img/banner-bg-desktop.jpg');
+    }
+
+    /* WebP Support Check: Overwrite with WebP for desktop if supported */
+    @supports (background-image: url("data:image/webp;base64,UklGRiIAAABXRUJQVlA4IBYAAAAwAQCdASoBAAEADsD+JaQAA3AA/vhAA")) {
+        .hero-banner {
+            background-image: url('../img/banner-bg-desktop.webp');
+        }
+    }
+    
     .hero-content h1 {
         font-size: 3.5em;
     }
