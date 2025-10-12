@@ -345,6 +345,10 @@ h1, h2, h3 {
     /* padding: 0 10px; */
 }
 
+.category-grid p {
+    font-weight: 600;
+}
+
 .category-item {
     text-align: center;
     padding: 2%;
