@@ -22,9 +22,14 @@
     }
 
     .nav-logo {
-        position: relative;
-        left: 0;
-        transform: none;
+        position: relative; /* Overrides position: absolute from mobile.css */
+        left: 0; /* Resets the left position */
+        transform: none; /* Resets the translateX(-50%) */
+    }
+
+    .logo-svg {
+        height: 30px; /* Adjust size for mobile navbar height (60px) */
+        width: auto;
     }
 
     .desktop-nav-links {
