@@ -17,9 +17,11 @@
     --color-black: #000000;
     --color-dark-gray: #212121;
     --color-white: #FFFFFF;
-    --color-light-gray: #F5F5F5;
+    --color-light-gray: #c7c7c7;
+    --color-dark-gray: #333333;
     --color-primary-brown: #cb956d; /* Used for "Why Choose Us" underline */
-    --color-cta-primary: var(--color-white);
+    --color-cta-header: var(--color-white);
+    --color-cta-primary: var(--color-black);
     --color-cta-secondary: var(--color-dark-gray);
 
     /* Fonts */
@@ -226,30 +228,43 @@ h1, h2, h3 {
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease;
-    /* border: 2px solid; */
+    border: 2px solid;
     display: inline-block;
     text-align: center;
 }
 
+.btn-header {
+    background-color: var(--color-white);
+    color: var(--color-black);
+    border-color: var(--color-white);
+}
+
+.btn-header:hover {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    border-color: var(--color-white);
+}
+
 .btn-primary {
-    background-color: var(--color-cta-primary);
-    color: var(--color-cta-secondary);
-    border-color: var(--color-cta-secondary);
+    background-color: var(--color-black);
+    color: var(--color-white);
+    border-color: var(--color-black);
 }
 
 .btn-primary:hover {
-    background-color: var(--color-light-gray);
-    color: var(--color-dark-gray);
+    background-color: var(--color-white);
+    color: var(--color-black);
+    border-color: var(--color-black);
 }
 
 .btn-secondary {
-    background-color: var(--color-white);
+    background-color: var(--color-light-gray);
     color: var(--color-dark-gray);
-    border-color: var(--color-dark-gray);
+    border-color: var(--color-black);
 }
 
 .btn-secondary:hover {
-    background-color: var(--color-dark-gray);
+    background-color: var(--color-black);
     color: var(--color-white);
 }
 
