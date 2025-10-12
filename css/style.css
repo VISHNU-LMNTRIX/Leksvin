@@ -8,6 +8,7 @@
 
 /* === Desktop/Larger Screen Styles (Laptops and up) === */
 @media (min-width: 768px) {
+
     /* === Navbar (Desktop) - Transparent and Centered Links === */
     .navbar {
         background-color: transparent; /* Transparent on desktop */
@@ -71,14 +72,26 @@
     }
 
 
-    /* === Product Categories Section (Desktop) === */
+    /* === Product Categories Section (Desktop - Updated to Flexbox) === */
     .category-grid {
-        grid-template-columns: repeat(6, 1fr); /* 6 categories in a row */
-        gap: 30px;
+        /* Inherits display: flex; flex-wrap: wrap; */
+        justify-content: space-evenly; /* Space out 4 items horizontally */
+        /* grid-template-columns: repeat(6, 1fr); <-- Removed implicit grid setting */
+        gap: initial; /* Clear any residual mobile gap settings */
+        margin-top: 30px;
     }
-    .category-circle {
-        width: 120px;
-        height: 120px;
+    .category-grid .category-item {
+        width: 25%; /* Four items * 25% = 100% */
+        margin-bottom: 0; /* Remove vertical margin applied in mobile */
+    }
+    /* .category-circle {
+        width: 200px;
+        height: 200px;
+    } */
+
+    /* === Desktop Utility Visibility Override === */
+    .hide-on-mobile {
+        display: block !important; /* Forces the hidden item to display on desktop */
     }
 
     /* === Brands Section (Desktop) === */

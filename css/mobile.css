@@ -18,7 +18,7 @@
     --color-dark-gray: #212121;
     --color-white: #FFFFFF;
     --color-light-gray: #F5F5F5;
-    --color-primary-violet: #462be2; /* Used for "Why Choose Us" underline */
+    --color-primary-brown: #cb956d; /* Used for "Why Choose Us" underline */
     --color-cta-primary: var(--color-white);
     --color-cta-secondary: var(--color-dark-gray);
 
@@ -317,20 +317,28 @@ h1, h2, h3 {
 }
 
 
-/* === Product Categories Section === */
+/* === Product Categories Section (Updated to Flexbox) === */
 .category-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    display: flex; /* Changed from grid to flex */
+    flex-wrap: wrap; /* Allows wrapping to 2 items per row */
+    justify-content: space-evenly; /* Spreads the two items out, creating the gap */
+    
+    /* Removed: grid-template-columns: repeat(2, 1fr); */
+    /* Removed: gap: 20px; */
+    
     margin-top: 30px;
-    padding: 0 10px;
+    /* padding: 0 10px; */
 }
 
 .category-item {
     text-align: center;
-    padding: 10px;
+    padding: 2%;
     cursor: pointer;
     transition: transform 0.3s ease;
+    
+    /* Set width for 2 items per row on mobile, leaving space for the gap */
+    width: 48%; 
+    margin-bottom: 20px; /* Adds vertical space between rows */
 }
 
 .category-item:hover {
@@ -338,8 +346,10 @@ h1, h2, h3 {
 }
 
 .category-circle {
-    width: 100px;
-    height: 100px;
+    width: 100%; /* Takes up 100% of the parent's width (48% on mobile) */
+    height: 0; /* Collapse element height */
+    padding-top: 100%; /* Sets height equal to width (responsive square) */
+    position: relative;
     border-radius: 50%;
     background-color: var(--color-light-gray);
     margin: 0 auto 10px;
@@ -350,8 +360,13 @@ h1, h2, h3 {
 }
 
 .category-circle img {
-    width: 80%;
-    height: 80%;
+    /* Center the image absolutely inside the responsive container */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%; /* Keeps the image slightly smaller than the circle to maintain padding */
+    height: 100%;
     object-fit: contain;
 }
 
@@ -377,7 +392,7 @@ h1, h2, h3 {
     text-align: center;
     margin-top: 30px;
     padding: 10px;
-    border-left: 3px solid var(--color-primary-violet);
+    border-left: 3px solid var(--color-primary-brown);
     display: inline-block;
 }
 
@@ -428,7 +443,7 @@ h1, h2, h3 {
     left: 0;
     width: 100%;
     height: 3px;
-    background-color: var(--color-primary-violet);
+    background-color: var(--color-primary-brown);
 }
 
 .why-choose-us-section .subtitle {
@@ -452,7 +467,7 @@ h1, h2, h3 {
 
 .why-point-icon {
     font-size: 2em;
-    color: var(--color-primary-violet);
+    color: var(--color-primary-brown);
     flex-shrink: 0;
 }
 
@@ -537,7 +552,7 @@ h1, h2, h3 {
 }
 
 .social-links a:hover {
-    color: var(--color-primary-violet);
+    color: var(--color-primary-brown);
 }
 
 .footer-links h4 {
@@ -553,16 +568,19 @@ h1, h2, h3 {
 
 .footer-links a:hover {
     text-decoration: underline;
-    color: var(--color-primary-violet);
+    color: var(--color-primary-brown);
 }
 
 .footer-copyright {
-    margin-top: 30px;
     padding-top: 15px;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
     font-size: 0.8em;
     text-align: center;
     opacity: 0.7;
+}
+
+/* === Mobile Utility Hiding === */
+.hide-on-mobile {
+    display: none;
 }
 
 /* === Keyframe Animations === */
