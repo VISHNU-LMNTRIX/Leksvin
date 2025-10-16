@@ -5,37 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Products - Leksvin</title>
     <meta name="description" content="Browse our comprehensive range of car care product categories, from detailing essentials to industrial cleaning solutions.">
+    <script src="https://kit.fontawesome.com/7844317197.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/mobile.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="icon" href="img/logo.svg" type="image/svg+xml">
-    <style>
-        /* Specific styles for the products page if needed, otherwise uses shared styles */
-        .full-category-grid {
-            grid-template-columns: repeat(2, 1fr); /* Default 2 per row for mobile */
-            gap: 25px;
-            margin-top: 30px;
-        }
-        .full-category-grid .category-item p {
-            font-weight: 500;
-        }
-        
-        @media (min-width: 768px) {
-            .full-category-grid {
-                grid-template-columns: repeat(4, 1fr); /* 4 per row for desktop */
-            }
-        }
-    </style>
+    <link rel="icon" href="img/fav-icon/logo.svg" type="image/svg+xml">
 </head>
 <body>
 
     <nav class="navbar flex items-center justify-between">
-        <a href="index.html" class="nav-logo">LEKSVIN</a>
+        <a href="index.html" class="nav-logo">
+            <img src="img/logo/logo.svg" alt="Leksvin Logo" class="logo-svg">
+        </a>
+
         <ul class="desktop-nav-links">
             <li><a href="products.html">Products</a></li>
             <li><a href="about-us.html">About Us</a></li>
             <li><a href="contact-us.html">Contact Us</a></li>
         </ul>
+
         <div class="hamburger">
             <span class="bar"></span>
             <span class="bar"></span>
@@ -45,10 +32,11 @@
 
     <div class="sliding-menu">
         <ul class="flex-col">
+            <li><a href="index.html">Home</a></li>
             <li class="submenu-toggle-container">
                 <a href="products.html">Products</a>
-                <span class="submenu-toggle rotated">+</span>
-                <ul class="submenu open">
+                <span class="submenu-toggle"><i class="fa-solid fa-plus"></i></span>
+                <ul class="submenu">
                     <li><a href="pages/products/cleaning-and-detailing-essentials.html">Cleaning & Detailing Essentials</a></li>
                     <li><a href="pages/products/protective-coatings-and-waxes.html">Protective Coatings & Waxes</a></li>
                     <li><a href="pages/products/interior-and-exterior-care-products.html">Interior & Exterior Care Products</a></li>
@@ -67,59 +55,67 @@
         </ul>
     </div>
 
-    <section class="p-y-40 text-center" style="padding-top: 100px;">
+    <section class="p-y-60 text-center">
         <div class="container">
-            <h1>Browse Our Product Categories</h1>
-            <p style="margin-bottom: 30px;">“No matter your car’s need, Leksvin has the right solution.”</p>
-            
-            <div class="full-category-grid" style="display: grid;">
-                
+            <h2>Browse Our Product Categories</h2>
+            <div class="category-grid">
                 <a href="pages/products/cleaning-and-detailing-essentials.html" class="category-item">
                     <div class="category-circle"><img src="img/product-category/cleaning_and_detailing.jpg" alt="Cleaning & Detailing"></div>
-                    <p>Cleaning & Detailing Essentials</p>
+                    <p>Cleaning & Detailing</p>
                 </a>
                 <a href="pages/products/protective-coatings-and-waxes.html" class="category-item">
                     <div class="category-circle"><img src="img/product-category/coatings_and_waxes.jpg" alt="Coatings & Waxes"></div>
-                    <p>Protective Coatings & Waxes</p>
+                    <p>Coatings & Waxes</p>
                 </a>
                 <a href="pages/products/interior-and-exterior-care-products.html" class="category-item">
                     <div class="category-circle"><img src="img/product-category/interior_and_exterior_care.jpg" alt="Interior & Exterior Care"></div>
-                    <p>Interior & Exterior Care Products</p>
+                    <p>Interior & Exterior Care</p>
                 </a>
                 <a href="pages/products/professional-grade-maintenance-solutions.html" class="category-item">
                     <div class="category-circle"><img src="img/product-category/maintenance_solutions.jpg" alt="Maintenance Solutions"></div>
-                    <p>Professional-Grade Maintenance Solutions</p>
+                    <p>Maintenance Solutions</p>
                 </a>
                 <a href="pages/products/industrial-cleaners.html" class="category-item">
                     <div class="category-circle"><img src="img/product-category/industrial_cleaners.jpg" alt="Industrial Cleaners"></div>
                     <p>Industrial Cleaners</p>
                 </a>
-                <a href="pages/products/floor-cleaners.html" class="category-item">
-                    <div class="category-circle"><img src="img/product-category/floor_cleaning.jpg" alt="Floor Cleaning"></div>
-                    <p>Floor Cleaning</p>
-                </a>
                 <a href="pages/products/workshop-cleaning.html" class="category-item">
-                    <div class="category-circle"><img src="img/product-category/workshop_cleaning.jpg" alt="Workshop Cleaning"></div>
-                    <p>Workshop Cleaning</p>
+                    <div class="category-circle"><img src="img/product-category/floor_cleaning.jpg" alt="Workshop Cleaning"></div>
+                    <p>Floor Cleaners</p>
                 </a>
-                <a href="pages/products/decontamination-chemicals.html" class="category-item">
-                    <div class="category-circle"><img src="img/product-category/decontamination_chemicals.jpg" alt="Decontamination Chemicals"></div>
+                <a href="pages/products/cleaning-and-detailing-essentials.html" class="category-item">
+                    <div class="category-circle"><img src="img/product-category/workshop_cleaning.jpg" alt="Cleaning & Detailing"></div>
+                    <p>Workshop Cleaners</p>
+                </a>
+                <a href="pages/products/protective-coatings-and-waxes.html" class="category-item">
+                    <div class="category-circle"><img src="img/product-category/decontamination_chemicals.jpg" alt="Coatings & Waxes"></div>
                     <p>Decontamination Chemicals</p>
                 </a>
-                <a href="pages/products/heavy-duty-cleaning-compound.html" class="category-item">
-                    <div class="category-circle"><img src="img/product-category/heavy_duty_cleaning_compound.jpg" alt="Heavy Duty Compound"></div>
-                    <p>Heavy Duty Cleaning Compound</p>
+                <a href="pages/products/interior-and-exterior-care-products.html" class="category-item">
+                    <div class="category-circle"><img src="img/product-category/heavy_duty_cleaning_compound.jpg" alt="Interior & Exterior Care"></div>
+                    <p>Heavy Duty Cleaning Compounds</p>
                 </a>
-                <a href="pages/products/electrical-contact-cleaners.html" class="category-item">
-                    <div class="category-circle"><img src="img/product-category/electrical_cleaners.jpg" alt="Electrical Cleaners"></div>
-                    <p>Electrical contact cleaners</p>
+                <a href="pages/products/professional-grade-maintenance-solutions.html" class="category-item">
+                    <div class="category-circle"><img src="img/product-category/electrical_cleaners.jpg" alt="Maintenance Solutions"></div>
+                    <p>Electrical Contact Cleaners</p>
                 </a>
-                <a href="pages/products/ev-fluids.html" class="category-item">
-                    <div class="category-circle"><img src="img/product-category/ev_fluids.jpg" alt="EV Fluids"></div>
-                    <p>EV fluids</p>
+                <a href="pages/products/industrial-cleaners.html" class="category-item">
+                    <div class="category-circle"><img src="img/product-category/ev_fluids.jpg" alt="Industrial Cleaners"></div>
+                    <p>EV Fluids</p>
+                </a>
+                <a href="pages/products/workshop-cleaning.html" class="category-item">
+                    <div class="category-circle"><img src="img/product-category/car_wash_&_car_care.jpg" alt="Workshop Cleaning"></div>
+                    <p>Car Wash & Car Care</p>
+                </a>
+                <a href="pages/products/workshop-cleaning.html" class="category-item">
+                    <div class="category-circle"><img src="img/product-category/home_care_chemicals.jpg" alt="Workshop Cleaning"></div>
+                    <p>Home Care Chemicals</p>
+                </a>
+                <a href="pages/products/workshop-cleaning.html" class="category-item">
+                    <div class="category-circle"><img src="img/product-category/marine_cleaning.jpg" alt="Workshop Cleaning"></div>
+                    <p>Marine Cleaning</p>
                 </a>
             </div>
-
         </div>
     </section>
 
@@ -134,14 +130,15 @@
                     Mobile: <a href="tel:+971528763685">+971 52 876 3685</a>
                 </address>
                 <div class="social-links">
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
                 </div>
             </div>
             <div class="footer-links">
                 <div class="links-col">
                     <h4>Quick Links</h4>
                     <ul>
+                        <li><a href="index.html">Home</a></li>
                         <li><a href="products.html">Products</a></li>
                         <li><a href="about-us.html">About Us</a></li>
                         <li><a href="contact-us.html">Contact Us</a></li>

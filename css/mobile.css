@@ -47,6 +47,10 @@ h1, h2, h3 {
     margin-bottom: 0.5em;
 }
 
+h2 {
+    font-size: 1.8em;
+}
+
 .container {
     width: 95%;
     max-width: 1200px;
@@ -95,6 +99,10 @@ h1, h2, h3 {
 
 .p-y-40 {
     padding: 40px 0;
+}
+
+.p-y-60 {
+    padding: 60px 0px 0px;
 }
 
 /* === Navbar (Mobile) === */
