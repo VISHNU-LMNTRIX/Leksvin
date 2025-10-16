@@ -19,7 +19,6 @@
     --color-white: #FFFFFF;
     --color-very-light-gray: #f0f0f0;
     --color-light-gray: #c7c7c7;
-    --color-dark-gray: #202020;
     --color-primary-brown: #cb956d; /* Used for "Why Choose Us" underline */
     --color-cta-header: var(--color-white);
     --color-cta-primary: var(--color-black);
@@ -49,7 +48,7 @@ h1, h2, h3 {
 }
 
 .container {
-    width: 90%;
+    width: 94%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px 0;
@@ -135,17 +134,6 @@ h1, h2, h3 {
     /* --- END NEW Styles --- */
 }
 
-/* .hamburger {
-    cursor: pointer;
-    width: 30px;
-    height: 30px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    padding: 5px 0;
-    z-index: 1001;
-} */
 .hamburger {
     display: flex;
     flex-direction: column;
@@ -236,7 +224,7 @@ h1, h2, h3 {
     overflow: scroll;
     transition: max-height 0.3s ease-in-out;
     background-color: var(--color-very-light-gray);
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .submenu.open {
@@ -628,16 +616,12 @@ h1, h2, h3 {
     opacity: 0.7;
 }
 
-/* === Mobile Utility Hiding === */
-.hide-on-mobile {
-    display: none;
-}
 
 /* === Keyframe Animations === */
 @keyframes fadeInDown {
     0% {
         opacity: 0;
-        transform: translateY(-20px);
+        transform: translateY(-25px);
     }
     100% {
         opacity: 1;
@@ -648,7 +632,7 @@ h1, h2, h3 {
 @keyframes fadeInUp {
     0% {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(15px);
     }
     100% {
         opacity: 1;

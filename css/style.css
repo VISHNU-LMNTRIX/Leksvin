@@ -42,7 +42,7 @@
     }
 
     .desktop-nav-links a:hover {
-        color: var(--color-primary-violet);
+        color: var(--color-light-gray);
     }
 
     /* === Hero Banner (Desktop) - Overriding Mobile Banner === */
@@ -86,13 +86,9 @@
         margin-top: 30px;
     }
     .category-grid .category-item {
-        width: 25%; /* Four items * 25% = 100% */
-        margin-bottom: 0; /* Remove vertical margin applied in mobile */
+        width: 30%; /* Three items * 30% = 90% */
+        margin-bottom: 24; /* Remove vertical margin applied in mobile */
     }
-    /* .category-circle {
-        width: 200px;
-        height: 200px;
-    } */
 
     /* === Desktop Utility Visibility Override === */
     .hide-on-mobile {
