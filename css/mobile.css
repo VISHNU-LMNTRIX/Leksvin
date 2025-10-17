@@ -458,14 +458,6 @@ h2 {
 .brand-logos img {
     width: 200px;
     height: auto;
-    opacity: 0.7;
-    filter: grayscale(100%);
-    transition: opacity 0.3s ease, filter 0.3s ease;
-}
-
-.brand-logos img:hover {
-    opacity: 1;
-    filter: grayscale(0%);
 }
 
 /* === Why Choose Us Section === */
