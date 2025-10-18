@@ -456,8 +456,14 @@ h2 {
 }
 
 .brand-logos img {
-    width: 200px;
-    height: auto;
+    height: 80px;                   /* consistent logo height */
+    width: auto;
+    max-width: 80%;                 /* maintain aspect ratio */
+    object-fit: contain;            /* prevent distortion */
+    transition: transform 0.3s ease;
+}
+.brand-logos img:hover {
+    transform: scale(1.15);
 }
 
 /* === Why Choose Us Section === */
