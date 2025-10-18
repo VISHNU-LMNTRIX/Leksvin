@@ -422,23 +422,24 @@ h2 {
 
 /* === About Text Section === */
 .about-text-section {
-    padding: 50px 0;
-    background-color: var(--color-light-gray);
+    background-color: #ffffff;
+    opacity: 1;
+    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #ffffff 12px ), repeating-linear-gradient( #cacaca55, #cacaca );
 }
 
 .about-text-section p {
-    margin-bottom: 15px;
+    margin: 40px 0px 15px;
     font-size: 1.1em;
 }
 
 .about-text-section .tagline {
     font-style: italic;
     font-weight: 600;
+    font-size: 1.2em;
     color: var(--color-black);
     text-align: center;
     margin-top: 30px;
     padding: 10px;
-    border-left: 3px solid var(--color-primary-brown);
     display: inline-block;
 }
 
